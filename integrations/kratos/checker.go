@@ -201,8 +201,8 @@ func NewDisableChecker() Checker {
 }
 
 // NewCustomChecker 创建自定义检查器
-func NewCustomChecker(name string, fn func(ctx context.Context, manager *core.Manager, loginID string) error) Checker {
-	return &CustomChecker{name: name, fn: fn}
+func NewCustomChecker(fn func(ctx context.Context, manager *core.Manager, loginID string) error) Checker {
+	return &CustomChecker{fn: fn}
 }
 
 // CheckerAnd 创建AND组合检查器
