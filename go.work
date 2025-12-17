@@ -12,4 +12,5 @@ use (
 	./storage/memory
 	./storage/redis
 	./stputil
+	integrations/goravel
 )
